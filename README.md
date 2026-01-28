@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Frontend Mentor – Testimonials Grid Section Solution
 
-## Getting Started
+This is my solution to the Testimonials Grid Section challenge
+ on Frontend Mentor. Frontend Mentor challenges are designed to help developers practice real-world layout and responsive design skills using modern tools and workflows.
 
-First, run the development server:
+Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Overview
+    The Challenge
+    Links
+My Process
+    Built With
+    What I Learned
+    Continued Development
+    Useful Resources
+Author
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Overview
+The Challenge
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Users should be able to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-View an optimal layout depending on their device’s screen size
+-See a responsive testimonial grid that matches the provided design as closely as possible
 
-## Learn More
+The main focus of this challenge was recreating a complex desktop grid layout while maintaining a clean, readable mobile experience.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Solution URL: https://www.frontendmentor.io/solutions/your-solution-link
 
-## Deploy on Vercel
+Live Site URL: https://your-live-site-url.vercel.app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+My Process
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built With
+    - Semantic HTML5
+    - Next.js (App Router)
+    - React
+    - Tailwind CSS
+    - CSS Grid
+    - Mobile-first workflow
+    - Responsive design principles
+
+What I Learned
+
+This project reinforced the importance of separating layout concerns from presentational components.
+
+Key takeaways:
+
+Mobile-first grid design:
+Start with a simple stacked layout and progressively enhance it at larger breakpoints.
+
+Explicit grid placement for complex layouts:
+Matching the desktop design required deliberate use of col-start, col-span, and row-span instead of relying on auto-placement.
+
+Reusable component architecture:
+The testimonial card was built as a reusable component, with layout-specific grid placement handled by the parent container.
+
+Example of desktop-only placement logic:
+
+<div className="grid gap-6 lg:grid-cols-4">
+  <div className="lg:col-span-2">
+    <TestimonialCard />
+  </div>
+  <div className="lg:col-start-3">
+    <TestimonialCard />
+  </div>
+</div>
+
+
+This approach keeps components flexible and prevents layout rules from leaking into UI elements.
+
+Continued Development
+
+In future projects, I want to continue focusing on:
+    - Advanced CSS Grid techniques for complex layouts
+    - Creating scalable Tailwind component patterns
+    - Writing cleaner, more maintainable component APIs
+    - Turning Frontend Mentor solutions into polished portfolio case studies
+
+Useful Resources
+
+    - Tailwind CSS Documentation
+    – Essential for responsive utilities and layout control
+    - CSS Grid Layout – MDN – Helped solidify grid placement concepts
+    - Next.js Documentation – Reference for component structure and image optimization
+
+Author
+
+Website: https://adrianzavala.dev
+
+Frontend Mentor: https://www.frontendmentor.io/profile/yourusername
+
+GitHub: https://github.com/zavaladrian# TestimonialGrids
